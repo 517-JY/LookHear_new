@@ -6,6 +6,11 @@ const volume = videoPlayer.querySelector('.volume');
 const currentTimeElement = videoPlayer.querySelector('.current');
 const durationTimeElement = videoPlayer.querySelector('.duration');
 
+
+const progress = videoPlayer.querySelector('.video-progress');
+const progressBar = videoPlayer.querySelector('.video-progress-filled');
+
+
 playButton.addEventListener('click', (event) => {
     if (video.paused) {
         video.play();
@@ -38,3 +43,23 @@ const currentTime = () => {
 
 
 video.addEventListener('timeupdate', currentTime);
+
+
+
+// ProgressBar
+// timeupdate is running every time the time is updated
+video.addEventListener('timeupdate', () => {
+    const percentage = (video.currentTime / video.duration) * 100;
+    progressBar.style.width = `${percentage}%`;
+})
+
+
+
+// change progress bar on click
+progress.addEventListener('click', (event) => {
+    const progressTime = (event.offsetX / progress.offsetWidth) * video.duration;
+    video.currentTime = progressTime;
+
+
+})
+
