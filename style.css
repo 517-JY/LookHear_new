@@ -1,0 +1,31 @@
+html {
+    box-sizing: border-box;
+}
+
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+body{
+    padding:0;
+    display: flex;
+    background:aliceblue;
+    min-height:100vh;
+    background:linear-gradient(135deg, #000000 0%, #333 48%, #686868 100%);
+    background-size:cover;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-player{
+    max-width:750px;
+    position:relative;
+    overflow: hidden;
+}
+
+.video {
+    width: 100%;
+}
