@@ -29,3 +29,8 @@ body{
 .video {
     width: 100%;
 }
+
+.time{
+    font-size:1em;
+    color:whitesmoke
+}
