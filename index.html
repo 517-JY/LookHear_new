@@ -1,53 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta http-equiv="=X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>HTML Video Player</title>
-    <!-- <style type="text/css">
-        canvas {
-            border: 1px solid black;
-            background: aliceblue;
-        }
+    <title>LH Video Player(simplified)</title>
+  </head>
 
-        body {
-            margin: 0;
-        }
-    </style> -->
-</head>
+  <body>
+    <section class="section" id="section--1">
+      <div class="section__title">
+        <h2 class="section__description">LookHear Local Demo</h2>
+        <h3 class="section__header">
+          Try to make the music player work with the simplest functionality
+        </h3>
+      </div>
 
-<body>
-    <div class="video-player">
-        <video src="Bassus.mp4" class="video"></video>
+      <!-- Main Part Display Info -->
+      <div class="piece">
+        <!-- Main Part Tab -->
+        <div class="piece__partTab-container">
+          <button
+            class="btn piece__partTab piece__partTab--1 piece__partTab--active"
+            data-tab="1"
+          >
+            <span>01</span>Altus
+          </button>
+          <button class="btn piece__partTab piece__partTab--2" data-tab="2">
+            <span>02</span>Cantus
+          </button>
+          <button class="btn piece__partTab piece__partTab--3" data-tab="3">
+            <span>03</span>Tenor
+          </button>
+        </div>
 
+        <!-- Diplay piece Info for first part  -->
+        <!-- ////////////////////// /////////// -->
+        <div
+          class="
+            piece__partContent piece__partContent--1 piece__partContent--active
+          "
+        >
+          <!-- Begin Video Player-->
+          <div class="video-player video-player--1">
+            <video src="Altus.mp4" class="video"></video>
 
-        <div class="player-controls">
-            <!-- the progress bar -->
-            <div class="video-progress">
-                <div class="video-progress-filled">
+            <!-- Begin player control -->
+            <div class="player-controls player-controls--1">
+              <!-- the progress bar -->
+              <div class="video-progress video-progress--1">
+                <div
+                  class="video-progress-filled video-progress-filled--1"
+                ></div>
+              </div>
 
-                </div>
+              <!-- the play button -->
+              <button class="play-button" title="Play">▶️</button>
 
-            </div>
-            <!-- the play button -->
-            <button class="play-button" title="Play">▶️</button>
+              <!-- volume bar -->
+              <input
+                type="range"
+                class="volume"
+                min="0"
+                max="1"
+                step="0.01"
+                value="1"
+              />
 
-            <!-- volume bar -->
-            <input type="range" class="volume" min="0" max="1" step="0.01" value='1'>
-
-            <!-- time span indicator -->
-            <div class="time">
+              <!-- Begin time span indicator -->
+              <div class="time time--1">
                 <span class="current">0:00 </span>
                 /
                 <span class="duration">0:00 </span>
+              </div>
+              <!-- End  time span indicator -->
             </div>
+            <!-- End player control -->
+          </div>
+          <!-- End Video Player-->
 
+          <img
+            src="altus.jpg"
+            class="piece__partContent__img piece__partContent__img--1"
+          />
         </div>
-    </div>
-    <script src="video.js"></script>
-</body>
+        <!-- ////////////////////// /////////// -->
+        <!-- End Part1 Info Display -->
 
+        <!-- Diplay piece Info for second part  -->
+        <!-- ////////////////////// /////////// -->
+        <div class="piece__partContent piece__partContent--2">
+          <!-- Begin Video Player-->
+          <div class="video-player video-player--2">
+            <video src="Cantus.mp4" class="video"></video>
+
+            <!-- Begin player control -->
+            <div class="player-controls player-controls--2">
+              <!-- the progress bar -->
+              <div class="video-progress video-progress--2">
+                <div
+                  class="video-progress-filled video-progress-filled--2"
+                ></div>
+              </div>
+
+              <!-- the play button -->
+              <button class="play-button" title="Play">▶️</button>
+
+              <!-- volume bar -->
+              <input
+                type="range"
+                class="volume"
+                min="0"
+                max="1"
+                step="0.01"
+                value="1"
+              />
+
+              <!-- Begin time span indicator -->
+              <div class="time time--2">
+                <span class="current">0:00 </span>
+                /
+                <span class="duration">0:00 </span>
+              </div>
+              <!-- End  time span indicator -->
+            </div>
+            <!-- End player control -->
+          </div>
+          <!-- End Video Player-->
+
+          <img
+            src="cantus.jpg"
+            class="piece__partContent__img piece__partContent__img--2"
+          />
+        </div>
+
+        <!-- ////////////////////// /////////// -->
+        <!-- End Part2 Info Display -->
+
+        <!-- Diplay piece Info for third part  -->
+        <!-- ////////////////////// /////////// -->
+        <div class="piece__partContent piece__partContent--3">
+          <!-- Begin Video Player-->
+          <div class="video-player video-player--3">
+            <video src="Tenor.mp4" class="video"></video>
+
+            <!-- Begin player control -->
+            <div class="player-controls player-controls--3">
+              <!-- the progress bar -->
+              <div class="video-progress video-progress--3">
+                <div
+                  class="video-progress-filled video-progress-filled--3"
+                ></div>
+              </div>
+
+              <!-- the play button -->
+              <button class="play-button" title="Play">▶️</button>
+
+              <!-- volume bar -->
+              <input
+                type="range"
+                class="volume"
+                min="0"
+                max="1"
+                step="0.01"
+                value="1"
+              />
+
+              <!-- Begin time span indicator -->
+              <div class="time time--3">
+                <span class="current">0:00 </span>
+                /
+                <span class="duration">0:00 </span>
+              </div>
+              <!-- End  time span indicator -->
+            </div>
+            <!-- End player control -->
+          </div>
+          <!-- End Video Player-->
+
+          <img
+            src="tenor.jpg"
+            class="piece__partContent__img piece__partContent__img--3"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="part nopadding" id="partdiv">
+        <canvas id="thePart">
+            <img class="noPadding2" id="source" src="altus.jpg" width="50%" height="100%" alt="part" />
+        </canvas>
+    </div> -->
+
+    <script src="video.js"></script>
+  </body>
 </html>
